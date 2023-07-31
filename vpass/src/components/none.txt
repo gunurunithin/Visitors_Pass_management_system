@@ -1,0 +1,31 @@
+import React ,{useState} from 'react';
+import axios from 'axios';
+
+const Form=()=>{
+
+    const [send,setSend] = useState({
+        fullname:"",
+        biometricid:"",
+        designation:"",
+        mobilenumber:"",
+        busnumber:"",
+        routecode:"",
+        adharnumber:""
+
+    })
+
+    const handleChange = (e) => {
+        setSend((prevState)=>({
+            ...prevState,
+            [e.target.name]:e.target.value
+        }))
+    }
+
+    const postSubmit = (e) =>{
+       e.preventDefault()
+       axios.post('http://localhost:5000/postdata',{send})
+       console.log(send)
+      
+       alert('Success')
+    }
+    

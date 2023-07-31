@@ -1,0 +1,39 @@
+#colmd4{
+    width: 180px;
+    height: 100px;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-left: 40px;
+    color: darkgreen;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 6px;
+    font-size: 20px;
+    box-shadow: 0px 0px 10px black;
+    align-items: center;
+}
+#homerow{
+    margin-left: 30px;
+}
+#vlogo{
+    width: 100%;
+    height: auto;
+}
+#hommar{
+    margin-top: 30px;
+}
+#homh2{
+    text-transform: uppercase;
+    font-style: oblique;
+    font-weight: bold;
+    padding-left: 60px;
+    padding-top: 60px;
+
+}
+#hompa{
+
+    padding-left: 60px;
+    padding-top: 40px;
+}

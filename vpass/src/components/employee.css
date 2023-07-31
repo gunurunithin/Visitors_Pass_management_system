@@ -1,0 +1,39 @@
+#form{
+    border: 2px solid black;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+table{
+    width: 100%;
+    border: 2px solid black;
+}
+table tr td{
+    border: 2px solid black;
+    padding: 20px;
+}
+table tr th{
+    border: 2px solid black;
+    padding: 20px;
+}
+#Empstyle{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+#Erow{
+    margin-top: 80px;
+}
+#Emlabe{
+    font-size: 15px;
+    font-weight: bold;
+    font-style: oblique;
+    font-size:20px ;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+#Empcon{
+    
+    margin-left:"20px";
+    height: 100vh;
+}

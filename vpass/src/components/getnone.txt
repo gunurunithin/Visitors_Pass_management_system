@@ -1,0 +1,76 @@
+const Driver=()=>{
+ 
+  const [houses,sethouses]=useState([])
+  useEffect(()=>{
+    axios.get('http://localhost:5000/getData')
+    .then((res)=>sethouses(res.data))
+  })  
+
+    return(
+      <div className="container-fluid">
+        <div className="row">
+             <div className="col-md-12" id="innerhead">
+                <div >
+                   <p>Drivers Attendance(Apr-2023-Report)Data</p>
+                </div>
+
+
+             </div>
+          </div>
+          <div className="row" id="buttons1">
+            <div className="col-md-6" id="buttons">
+              <ul>
+                <li><button>Copy</button></li>
+                <li><button>Csv</button></li>
+                <li><button>Excel</button></li>
+                <li><button>PDF</button></li>
+                <li><button>Print</button></li>
+              </ul>
+            </div>
+            <div className="col-m d-6" >
+              <form id="forms">
+                <label>Search: </label>
+                <input type="text" id="forms1"></input>
+              </form>
+            </div>
+          </div>
+         <div className="row">
+          <div className="col-md-12">
+          <table border={2} className="table table-bordered">
+            <thead>
+            <tr>
+             
+              <th>Staff Name</th>
+              <th>Biometric Id</th>
+             <th>Designation</th>
+              <th>Mobile</th>
+              <th>Bus Number</th>
+              <th>Route Code</th>
+              <th>Aadharcard No</th>
+             </tr>
+            </thead>
+
+             {
+              houses.map((val,key) => {
+                return(
+                   <tr key={key}>
+                    
+                      <td>{val.fullname}</td>
+                      <td>{val.biometricid}</td>
+                      <td>{val.designation}</td>
+                      <td>{val.mobilenumber}</td>
+                      <td>{val.busnumber}</td>
+                      <td>{val.routecode}</td>
+                      <td>{val.adharnumber}</td>
+                     
+                   </tr>
+                )
+              })
+             }
+         </table>
+          </div>
+         </div>
+     </div>
+)
+
+}
